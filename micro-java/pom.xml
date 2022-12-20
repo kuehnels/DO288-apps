@@ -77,6 +77,11 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.eclipse.jkube</groupId>
+        <artifactId>openshift-maven-plugin</artifactId>
+        <version>1.2.0</version>
+      </plugin>	
+      <plugin>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-maven-plugin</artifactId>
         <version>${quarkus-plugin.version}</version>
@@ -140,6 +145,7 @@
         </plugins>
       </build>
       <properties>
+	<jkube.build.switchToDeployment>true</jkube.build.switchToDeployment>
         <quarkus.package.type>native</quarkus.package.type>
       </properties>
     </profile>
